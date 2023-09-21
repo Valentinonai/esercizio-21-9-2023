@@ -24,12 +24,14 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="text-center my-5">NEWS</h1>
-      <Container fluid="xl">
+      <Container className="p-5 p-sm-0">
+        <h1 className="text-start  mb-3 " style={{ fontSize: "80px" }}>
+          NEWS
+        </h1>
         <Row className="justify-content-center gy-3">
           {news &&
             news.map((singleNews: Welcome, index) => (
-              <Col xs={12} sm={8} lg={4} key={`news-${index}`}>
+              <Col xs={12} sm={6} lg={4} key={`news-${index}`}>
                 <SingleNews singleNews={singleNews} />
               </Col>
             ))}
